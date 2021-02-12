@@ -5,8 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faisal Bank</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Welcome to Faisal Bank</h1>
+    
+    <div id="login-area">
+        <h1 class="text-center">Welcome to Faisal Bank</h1>
+      <div class="submit-area">
+       <h2>Login</h2>
+       <input class="form-control"type="text" placeholder="Email">
+       <br>
+       <input class="form-control"type="Password" placeholder="password">
+       <br>
+       <button class="btn btn-success" id="login">Enter</button>
+      </div>
+
+    </div>
+    <div id="transaction-area">
+        <h1>Transaction</h1>
+
+    </div>
+    <script>
+        const loginbtn= document.getElementById("login");
+        loginbtn.addEventListener("click",function(){
+           const loginArea= document.getElementById("login-area");
+           loginArea.style.display="none";
+           const transactionArea = document.getElementById("transaction-area");
+           transactionArea.style.display="block";
+        })
+
+    </script>
+   
 </body>
 </html>
